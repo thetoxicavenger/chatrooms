@@ -1,15 +1,15 @@
 exports.seed = function (knex) {
     // Deletes ALL existing entries
-    return knex('users')
+    return knex('rooms')
         .del()
         .then(function () {
             // Inserts seed entries
-            return knex('users').insert([
+            return knex('rooms').insert([
                 {
-                    display_name: 'Mitch Cravens'
+                    name: 'Baseball Fanz'
                 },
                 {
-                   display_name: 'Troy Amelotte'
+                   name: 'Best of Reddit'
                 },
             ])
         })
